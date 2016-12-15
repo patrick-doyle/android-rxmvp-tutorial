@@ -1,9 +1,46 @@
+############
+# IntelliJ #
+############
+
 *.iml
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
+*.ipr
+*.iws
+.idea/
+out/
+
+##########
+# Gradle #
+##########
+
+.gradle/
+build
+!build.gradle
+!settings.gradle
+
+##################
+# Android Studio #
+##################
+
+local.properties
+*Test Results*.html
+captures*
+
+##########
+# Mac OS #
+##########
+
 .DS_Store
-/build
-/captures
-.externalNativeBuild
+
+##########################
+# Linux temporary files #
+##########################
+
+*~
+
+
+###############################
+# Android studio config files #
+###############################
+
+!.idea/codeStyleSettings.xml
+!.idea/copyright/profiles_settings.xml
