@@ -60,7 +60,9 @@ dependencies {
 
   //Gson
   compile 'com.google.code.gson:gson:2.8.0'
-  compile 'com.fatboyindustrial.gson-jodatime-serialisers:gson-jodatime-serialisers:1.5.0'
+  compile ('com.fatboyindustrial.gson-jodatime-serialisers:gson-jodatime-serialisers:1.5.0') {
+    exclude group: "joda-time", module: "joda-time"
+  }
 
   //Butterknife
   compile 'com.jakewharton:butterknife:8.0.1'
