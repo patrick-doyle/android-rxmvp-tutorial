@@ -51,6 +51,7 @@ public class NetworkModule {
   public Retrofit retrofit(OkHttpClient okHttpClient, Gson gson) {
     return new Retrofit.Builder()
         .client(okHttpClient)
+        .baseUrl("https://api.github.com/")
         .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
         .addConverterFactory(GsonConverterFactory.create(gson))
         .build();

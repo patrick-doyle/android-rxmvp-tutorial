@@ -1,13 +1,12 @@
 package com.twistedeqations.rxmvp.sample.activities.home.dagger;
 
 import android.app.Activity;
-import android.app.Application;
-import android.content.Context;
-import com.twistedeqations.rxmvp.sample.activities.home.mvp.MainActivityView;
-import com.twistedeqations.rxmvp.sample.app.dagger.AppScope;
+import com.twistedeqations.rxmvp.sample.activities.home.mvp.HomeModel;
+import com.twistedeqations.rxmvp.sample.activities.home.mvp.HomePresenter;
+import com.twistedeqations.rxmvp.sample.activities.home.mvp.HomeView;
+import com.twistedeqations.rxmvp.sample.app.network.GithubNetwork;
 import dagger.Module;
 import dagger.Provides;
-import retrofit2.http.POST;
 
 @Module
 public class HomeModule {
@@ -20,8 +19,19 @@ public class HomeModule {
 
   @Provides
   @HomeScope
-  public MainActivityView view() {
-    return new MainActivityView(activity);
+  public HomeView view() {
+    return new HomeView(activity);
+  }
+  @Provides
+  @HomeScope
+  public HomeModel model(GithubNetwork githubNetwork) {
+    return new HomeModel(activity, githubNetwork);
+  }
+
+  @Provides
+  @HomeScope
+  public HomePresenter homePresenter(HomeView homeView, HomeModel model) {
+    return new HomePresenter(homeView, model);
   }
 
 }

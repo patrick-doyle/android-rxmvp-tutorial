@@ -70,6 +70,7 @@ public abstract class GitHubRepo implements Parcelable {
   @SerializedName("forks_count")
   public abstract int forksCount();
 
+  @Nullable
   @SerializedName("language")
   public abstract String language();
 }
