@@ -1,6 +1,7 @@
 package com.twistedeqations.rxmvp.sample.activities.home.mvp;
 
 import android.app.Activity;
+import com.twistedeqations.rxmvp.sample.activities.repos.ReposActivity;
 import com.twistedeqations.rxmvp.sample.app.network.GithubNetwork;
 import com.twistedeqations.rxmvp.sample.app.network.model.GitHubRepo;
 import com.twistedequations.rxstate.RxSaveState;
@@ -33,4 +34,9 @@ public class HomeModel {
     return RxSaveState.getSavedState(activity)
         .map(bundle -> bundle.getParcelableArrayList(REPOLIST_STATE_KEY));
   }
+
+  public void startRepoActivity(List<GitHubRepo> repoList) {
+    ReposActivity.start(activity, repoList);
+  }
+
 }

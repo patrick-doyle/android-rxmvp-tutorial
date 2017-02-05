@@ -42,7 +42,7 @@ public class HomePresenter {
         .doOnEach(__ -> view.showLoading(false))
         .retry()
         .subscribe(gitHubRepoList -> {
-          view.setMessage("Look up button clicked - " + gitHubRepoList);
+          model.startRepoActivity(gitHubRepoList);
         });
   }
 }
