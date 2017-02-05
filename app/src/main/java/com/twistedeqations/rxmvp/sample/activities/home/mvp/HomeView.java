@@ -12,7 +12,7 @@ import butterknife.ButterKnife;
 import com.twistedeqations.rxmvp.sample.R;
 
 @SuppressLint("ViewConstructor")
-public class MainActivityView extends FrameLayout {
+public class HomeView extends FrameLayout {
 
   @BindView(R.id.edit_username)
   EditText usernameEditText;
@@ -23,7 +23,7 @@ public class MainActivityView extends FrameLayout {
   @BindView(R.id.main_toolbar)
   Toolbar toolbar;
 
-  public MainActivityView(Activity activity) {
+  public HomeView(Activity activity) {
     super(activity);
 
     inflate(getContext(), R.layout.activity_main, this);
