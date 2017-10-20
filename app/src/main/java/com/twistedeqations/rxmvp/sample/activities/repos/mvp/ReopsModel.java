@@ -9,11 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 import rx.Observable;
 
-public class ReopsModel {
+public class ReposModel {
 
   private final Activity activity;
 
-  public ReopsModel(Activity activity) {
+  public ReposModel(Activity activity) {
     this.activity = activity;
   }
 

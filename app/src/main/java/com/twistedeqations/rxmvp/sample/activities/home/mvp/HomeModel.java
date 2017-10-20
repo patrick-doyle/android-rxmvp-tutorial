@@ -20,7 +20,7 @@ public class HomeModel {
     this.githubNetwork = githubNetwork;
   }
 
-  public Observable<List<GitHubRepo>> getUserReops(String username) {
+  public Observable<List<GitHubRepo>> getUserRepos(String username) {
     return githubNetwork.getReposForUser(username);
   }
 

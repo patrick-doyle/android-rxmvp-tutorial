@@ -1,7 +1,7 @@
 package com.twistedeqations.rxmvp.sample.activities.repos.dagger;
 
 import android.app.Activity;
-import com.twistedeqations.rxmvp.sample.activities.repos.mvp.ReopsModel;
+import com.twistedeqations.rxmvp.sample.activities.repos.mvp.ReposModel;
 import com.twistedeqations.rxmvp.sample.activities.repos.mvp.ReposPresenter;
 import com.twistedeqations.rxmvp.sample.activities.repos.mvp.view.ReposView;
 import com.twistedeqations.rxmvp.sample.app.network.GithubNetwork;
@@ -9,7 +9,7 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class ReopsModule {
+public class ReposModule {
 
   private final Activity activity;
 
@@ -24,8 +24,8 @@ public class ReopsModule {
   }
   @Provides
   @ReposScope
-  public ReopsModel model() {
-    return new ReopsModel(activity);
+  public ReposModel model() {
+    return new ReposModel(activity);
   }
 
   @Provides

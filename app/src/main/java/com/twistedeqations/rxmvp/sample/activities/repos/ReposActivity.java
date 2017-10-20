@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import com.twistedeqations.rxmvp.sample.activities.repos.dagger.DaggerReposComponent;
-import com.twistedeqations.rxmvp.sample.activities.repos.dagger.ReopsModule;
+import com.twistedeqations.rxmvp.sample.activities.repos.dagger.ReposModule;
 import com.twistedeqations.rxmvp.sample.activities.repos.mvp.ReposPresenter;
 import com.twistedeqations.rxmvp.sample.activities.repos.mvp.view.ReposView;
 import com.twistedeqations.rxmvp.sample.app.GithubApplication;
@@ -36,7 +36,7 @@ public class ReposActivity extends AppCompatActivity {
 
     DaggerReposComponent.builder()
         .appComponent(GithubApplication.get(this).component())
-        .reopsModule(new ReopsModule(this))
+        .reposModule(new ReposModule(this))
         .build().inject(this);
 
     setContentView(view);

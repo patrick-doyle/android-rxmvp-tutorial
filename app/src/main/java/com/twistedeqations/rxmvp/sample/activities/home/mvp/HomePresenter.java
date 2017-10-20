@@ -36,7 +36,7 @@ public class HomePresenter {
         .doOnNext(__ -> view.showLoading(true))
         .map(__ -> view.getUsernameEdit())
         .observeOn(Schedulers.io())
-        .switchMap(username -> model.getUserReops(username))
+        .switchMap(username -> model.getUserRepos(username))
         .observeOn(AndroidSchedulers.mainThread())
         .doOnNext(gitHubRepoList -> model.saveRepoListState(gitHubRepoList))
         .doOnEach(__ -> view.showLoading(false))

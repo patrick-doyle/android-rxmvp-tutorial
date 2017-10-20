@@ -10,10 +10,10 @@ import rx.subscriptions.CompositeSubscription;
 public class ReposPresenter {
 
   private final ReposView view;
-  private final ReopsModel model;
+  private final ReposModel model;
   private final CompositeSubscription compositeSubscription = new CompositeSubscription();
 
-  public ReposPresenter(ReposView view, ReopsModel model) {
+  public ReposPresenter(ReposView view, ReposModel model) {
     this.view = view;
     this.model = model;
   }

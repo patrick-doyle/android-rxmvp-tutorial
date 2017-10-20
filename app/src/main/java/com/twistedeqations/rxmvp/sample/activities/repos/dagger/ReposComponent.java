@@ -5,7 +5,7 @@ import com.twistedeqations.rxmvp.sample.app.dagger.AppComponent;
 import dagger.Component;
 
 @ReposScope
-@Component(modules = { ReopsModule.class }, dependencies = AppComponent.class)
+@Component(modules = { ReposModule.class }, dependencies = AppComponent.class)
 public interface ReposComponent {
 
   void inject(ReposActivity mainActivity);
